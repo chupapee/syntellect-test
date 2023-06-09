@@ -1,0 +1,30 @@
+{
+	"name": "syntellect-test",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"lint": "eslint \"./src/**/*.{ts,tsx}\"",
+		"lint:fix": "eslint \"./src/**/*.{ts,tsx}\" --fix",
+		"postinstall": "husky install"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.0.37",
+		"@types/react-dom": "^18.0.11",
+		"@vitejs/plugin-react": "^4.0.0",
+		"eslint": "^8.42.0",
+		"eslint-kit": "^9.2.0",
+		"husky": "^8.0.3",
+		"prettier": "^2.8.8",
+		"typescript": "^5.0.2",
+		"vite": "^4.3.9",
+		"vite-tsconfig-paths": "^4.2.0"
+	}
+}
