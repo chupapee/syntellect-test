@@ -1,0 +1,23 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+
+	justify-content: space-between;
+	align-items: center;
+	gap: 15px;
+
+	padding: 15px;
+}
+
+.wrapper > div {
+	height: 50%;
+}
+
+.title {
+	font-size: 22px;
+	font-weight: 500;
+	width: 100%;
+	text-align: center;
+}

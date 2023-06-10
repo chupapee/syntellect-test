@@ -1,0 +1,39 @@
+.main {
+	padding: 10px 12px;
+	font-size: 14px;
+
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.1s linear;
+	border-radius: 10px;
+}
+
+.main:focus {
+	outline: 1px solid blue;
+}
+
+.contained {
+	background-color: rgb(92, 92, 255);
+	color: white;
+}
+
+.contained:hover {
+	background-color: rgb(66, 66, 255);
+}
+.outlined {
+	background-color: transparent;
+	border: 1px solid rgb(92, 92, 255);
+}
+
+.outlined:hover {
+	border-color: rgb(82, 82, 255);
+	background-color: rgba(92, 92, 255, 0.1);
+}
+
+.outlined:disabled {
+	border-color: rgba(92, 92, 255, 0.3);
+}
+
+.outlined:disabled:hover {
+	background-color: inherit;
+}

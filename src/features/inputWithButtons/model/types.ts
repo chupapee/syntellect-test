@@ -4,4 +4,4 @@ export interface IButton {
 	text: string;
 }
 
-export type TSide = 'left' | 'right';
+export type ButtonType = 'Show number' | 'Show text' | 'Set text' | 'Clear';

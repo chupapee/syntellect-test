@@ -1,1 +1,1 @@
-export { InputWithButtons } from './InputWithButtons';
+export { InputWithButtons } from './inputWithButtons';

@@ -1,0 +1,31 @@
+.main {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	padding: 30px 0;
+	gap: 15px;
+
+	border-bottom: 1px solid black;
+}
+
+.side {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.side > button {
+	height: 100%;
+}
+
+.control {
+	display: flex;
+	align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+	.main {
+		display: flex;
+		flex-direction: column;
+	}
+}
