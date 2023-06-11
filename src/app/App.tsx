@@ -6,14 +6,15 @@ import styles from './styles.module.css';
 export const App = () => {
 	return (
 		<div className={styles.wrapper}>
-			<div>
-				<p className={styles.title}>First control</p>
+			<p className={styles.title}>First control</p>
+			<div className={styles.firstControl}>
 				<InputWithButtons rightButtons={['Clear', 'Set text']} />
 				<InputWithButtons leftButtons={['Show number']} rightButtons={['Show text']} />
 			</div>
-			<div>
-				<p className={styles.title}>Autocomplete</p>
-				<Autocomplete maxCount={3} />
+			<p className={styles.title}>Autocomplete</p>
+			<div className={styles.autocomplete}>
+				<Autocomplete initCount={3} />
+				<Autocomplete initCount={8} />
 			</div>
 		</div>
 	);

@@ -1,0 +1,10 @@
+.main {
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid var(--blue-light);
+	outline: none;
+}
+
+.main:focus {
+	outline: 1px solid var(--blue);
+}

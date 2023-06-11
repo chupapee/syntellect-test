@@ -4,6 +4,15 @@
 	padding: 0;
 }
 
+:root {
+	--white: rgb(255, 255, 255);
+	--red: rgb(255, 0, 0);
+
+	--blue: rgb(78, 78, 255);
+	--blue-dark: rgb(0, 0, 255);
+	--blue-light: rgb(113, 113, 255);
+}
+
 body {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 16px;

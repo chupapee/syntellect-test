@@ -1,0 +1,21 @@
+.wrapper {
+	width: 100%;
+
+	position: relative;
+}
+
+.search {
+	border-radius: 10px 10px 0px 0px;
+}
+
+.menu {
+	position: absolute;
+	z-index: 1000;
+	left: 0;
+	right: 0;
+}
+
+.fallback {
+	text-align: center;
+	margin-top: 10px;
+}

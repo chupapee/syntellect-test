@@ -3,6 +3,7 @@
 	justify-content: end;
 	flex-direction: column;
 	position: relative;
+	width: 100%;
 }
 
 .input {

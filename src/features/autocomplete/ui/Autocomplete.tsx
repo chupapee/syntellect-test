@@ -1,46 +1,60 @@
-import { ChangeEvent, useState, useTransition } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 
-import { CountryInfo } from '@/api/apiService';
+import { MenuItem } from '@/shared/ui/menuItem';
+import { SearchDropdown } from '@/shared/ui/searchDropdown';
+import { Select } from '@/shared/ui/select';
 
 import { useCountries } from '../model/helpers/useCountries';
+import styles from './styles.module.css';
 
 interface IAutocomplete {
-	maxCount?: number;
+	initCount: number;
 }
 
-export const Autocomplete = ({ maxCount }: IAutocomplete) => {
+const availableCounts = [3, 5, 8, 10, 15];
+
+export const Autocomplete = ({ initCount }: IAutocomplete) => {
+	const [count, setCount] = useState(initCount);
+	const handleCountChange = (e: ChangeEvent<HTMLSelectElement>) => {
+		setCount(Number(e.target.value));
+	};
+
 	const [controlVal, setControlVal] = useState('');
-	const [isPending, startTransition] = useTransition();
-
-	const { fetchCountries, countries, status, error } = useCountries(maxCount);
-
 	const handleChange = async (e: ChangeEvent<HTMLInputElement>) => {
 		const val = e.target.value;
 		setControlVal(val);
-		startTransition(() => {
-			fetchCountries(val);
-		});
 	};
 
-	const selectCountry = (country: CountryInfo) => {
-		setControlVal(country.fullName);
+	const { fetchCountries, countries, status, error } = useCountries(count);
+
+	useEffect(() => {
+		if (controlVal.length > 0) fetchCountries(controlVal);
+	}, [controlVal, count]);
+
+	const selectCountry = (countryName: string) => {
+		setControlVal(countryName);
 	};
 
 	return (
-		<div>
-			<h1>Autocomplete</h1>
-			<input value={controlVal} onChange={handleChange} />
-			{(status === 'loading' || isPending) && <p>Loading...</p>}
-			{countries.map((c) => (
-				<div key={c.name}>
-					<button onClick={() => selectCountry(c)}>
-						<p>{c.name}</p>
-						<img src={c.flag} alt={c.name} />
-						<p>{c.fullName}</p>
-					</button>
-				</div>
-			))}
-			{status === 'error' && <h2>{error}</h2>}
+		<div className={styles.wrapper}>
+			<SearchDropdown
+				value={controlVal}
+				onChange={handleChange}
+				loading={status === 'loading'}
+				options={controlVal.length > 0 ? countries : []}
+				error={status === 'error' ? error : null}
+			>
+				{countries.map((c) => (
+					<MenuItem key={c.name} mainVal={c.fullName} addtVal={c.name} img={c.flag} onClick={selectCountry} />
+				))}
+			</SearchDropdown>
+			<Select onChange={handleCountChange} defaultValue={count}>
+				{availableCounts.map((c) => (
+					<option key={c} value={c}>
+						{c}
+					</option>
+				))}
+			</Select>
 		</div>
 	);
 };

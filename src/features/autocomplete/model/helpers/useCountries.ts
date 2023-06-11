@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 import { CountryInfo, getCountryByName } from '@/api/apiService';
-import { timeout } from '@/shared/helpers/timeout';
 
 export function useCountries(maxCount?: number) {
 	const [countries, setCountries] = useState<CountryInfo[]>([]);
@@ -9,27 +8,21 @@ export function useCountries(maxCount?: number) {
 	const [error, setError] = useState<string | null>(null);
 
 	const fetchCountries = async (value: string) => {
-		if (value.length > 0) {
-			try {
-				setStatus('loading');
-				setCountries([]);
-				const list = await getCountryByName(value);
-				await timeout(300);
-				if (list.length > 0) {
-					setCountries(list.slice(0, maxCount));
-					setStatus('success');
-				} else {
-					throw new Error('Countries not found!');
-				}
-			} catch (error) {
-				setStatus('error');
-				if (error instanceof Error) {
-					setError(error.message);
-				} else setError('Oops.. Something went wrong!');
+		try {
+			setStatus('loading');
+			const list = await getCountryByName(value);
+			if (list.length > 0) {
+				setCountries(list.slice(0, maxCount));
+				setStatus('success');
+			} else {
+				throw new Error('Countries not found!');
 			}
-		} else {
-			setStatus('success');
+		} catch (error) {
+			setStatus('error');
 			setCountries([]);
+			if (error instanceof Error) {
+				setError(error.message);
+			} else setError('Oops.. Something went wrong!');
 		}
 	};
 
