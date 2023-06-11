@@ -8,8 +8,8 @@ export const App = () => {
 		<div className={styles.wrapper}>
 			<p className={styles.title}>First control</p>
 			<div className={styles.firstControl}>
-				<InputWithButtons rightButtons={['Clear', 'Set text']} />
-				<InputWithButtons leftButtons={['Show number']} rightButtons={['Show text']} />
+				<InputWithButtons initRightButtons={['Clear', 'Set text']} />
+				<InputWithButtons initLeftButtons={['Show number']} />
 			</div>
 			<p className={styles.title}>Autocomplete</p>
 			<div className={styles.autocomplete}>

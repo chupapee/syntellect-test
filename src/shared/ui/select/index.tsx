@@ -8,7 +8,7 @@ interface ISelect extends PropsWithChildren, SelectHTMLAttributes<HTMLSelectElem
 
 export const Select = ({ children, className, ...attrs }: ISelect) => {
 	return (
-		<select className={styles.main} {...attrs}>
+		<select className={`${styles.main} ${className}`} {...attrs}>
 			{children}
 		</select>
 	);

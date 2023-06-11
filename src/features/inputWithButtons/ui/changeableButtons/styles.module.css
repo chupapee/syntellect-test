@@ -1,0 +1,23 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+}
+
+.buttons {
+	width: 100%;
+	display: flex;
+	gap: 5px;
+}
+
+.buttons > button {
+	width: 100%;
+
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.select {
+	width: 100%;
+}

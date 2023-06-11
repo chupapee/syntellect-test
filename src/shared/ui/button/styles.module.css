@@ -20,3 +20,13 @@
 .contained:hover {
 	background-color: var(--blue-dark);
 }
+
+.outlined {
+	background-color: white;
+	border: 1px solid var(--blue-light);
+}
+
+.outlined:hover {
+	border-color: var(--blue-dark);
+	background-color: rgba(92, 92, 255, 0.1);
+}
