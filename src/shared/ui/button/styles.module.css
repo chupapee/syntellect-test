@@ -28,5 +28,5 @@
 
 .outlined:hover {
 	border-color: var(--blue-dark);
-	background-color: rgba(92, 92, 255, 0.1);
+	background-color: rgb(233, 233, 233);
 }

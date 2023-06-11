@@ -5,7 +5,6 @@ import { SearchDropdown } from '@/shared/ui/searchDropdown';
 import { Select } from '@/shared/ui/select';
 
 import { useCountries } from '../model/helpers/useCountries';
-import styles from './styles.module.css';
 
 interface IAutocomplete {
 	initCount: number;
@@ -36,7 +35,7 @@ export const Autocomplete = ({ initCount }: IAutocomplete) => {
 	};
 
 	return (
-		<div className={styles.wrapper}>
+		<div style={{ display: 'flex', gap: '5px' }}>
 			<SearchDropdown
 				value={controlVal}
 				onChange={handleChange}

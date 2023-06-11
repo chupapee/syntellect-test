@@ -7,10 +7,12 @@
 :root {
 	--white: rgb(255, 255, 255);
 	--red: rgb(255, 0, 0);
+	--red-dark: rgb(190, 50, 50);
 
 	--blue: rgb(78, 78, 255);
 	--blue-dark: rgb(0, 0, 255);
 	--blue-light: rgb(113, 113, 255);
+	--blue-purple: rgb(143, 148, 251);
 }
 
 body {

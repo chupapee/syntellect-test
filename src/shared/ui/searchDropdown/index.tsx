@@ -19,7 +19,8 @@ export const SearchDropdown = ({ options, loading, error, children, value, ...at
 					children
 				) : (
 					<div className={styles.fallback}>
-						{value && error ? <p>{error}</p> : loading && <p>loading...</p>}
+						{loading && <p>loading...</p>}
+						{value && error && <p>{error}</p>}
 					</div>
 				)}
 			</div>
