@@ -15,7 +15,7 @@ export const MenuItem = ({ mainVal, addtVal, img, onClick }: IMenuItem) => {
 					<p>{mainVal}</p>
 					<p>{addtVal}</p>
 				</div>
-				<img className={styles.icon} src={img} alt={mainVal} />
+				<img className={styles.icon} src={img} alt={addtVal} />
 			</button>
 		</div>
 	);

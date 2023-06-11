@@ -40,6 +40,7 @@ export const Autocomplete = ({ initCount }: IAutocomplete) => {
 			<SearchDropdown
 				value={controlVal}
 				onChange={handleChange}
+				placeholder="type country name!"
 				loading={status === 'loading'}
 				options={controlVal.length > 0 ? countries : []}
 				error={status === 'error' ? error : null}

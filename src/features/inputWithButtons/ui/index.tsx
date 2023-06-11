@@ -27,7 +27,13 @@ export const InputWithButtons = ({ initLeftButtons, initRightButtons }: IInputWi
 				/>
 			</div>
 			<div className={styles.control}>
-				<Input error={error} variant="outlined" value={control} onChange={handleControlChange} />
+				<Input
+					placeholder="type something..."
+					error={error}
+					variant="outlined"
+					value={control}
+					onChange={handleControlChange}
+				/>
 			</div>
 			<div className={styles.side}>
 				<ChangeableButtons
