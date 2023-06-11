@@ -49,9 +49,9 @@ export const Autocomplete = ({ initCount }: IAutocomplete) => {
 				))}
 			</SearchDropdown>
 			<Select title="countries max count" onChange={handleCountChange} defaultValue={count}>
-				{availableCounts.map((c) => (
-					<option key={c} value={c}>
-						{c}
+				{[...new Set([initCount, ...availableCounts])].map((count) => (
+					<option key={count} value={count}>
+						{count}
 					</option>
 				))}
 			</Select>

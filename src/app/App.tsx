@@ -14,7 +14,7 @@ export const App = () => {
 			<p className={styles.title}>Autocomplete</p>
 			<div className={styles.autocomplete}>
 				<Autocomplete initCount={3} />
-				<Autocomplete initCount={8} />
+				<Autocomplete initCount={10} />
 			</div>
 		</div>
 	);
