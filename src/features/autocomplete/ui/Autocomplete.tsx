@@ -48,7 +48,7 @@ export const Autocomplete = ({ initCount }: IAutocomplete) => {
 					<MenuItem key={c.name} mainVal={c.fullName} addtVal={c.name} img={c.flag} onClick={selectCountry} />
 				))}
 			</SearchDropdown>
-			<Select onChange={handleCountChange} defaultValue={count}>
+			<Select title="countries max count" onChange={handleCountChange} defaultValue={count}>
 				{availableCounts.map((c) => (
 					<option key={c} value={c}>
 						{c}

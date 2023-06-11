@@ -1,7 +1,7 @@
 import { selectByProp } from '@/shared/helpers/selectByProp';
 import { Button } from '@/shared/ui/button';
 
-import { ButtonType, IButton } from '../../model/types';
+import { ButtonType, IButton } from '../model/types';
 
 export const renderButtons = (buttons: IButton[], sideButtons?: ButtonType[]) => {
 	return sideButtons?.map((text) => {

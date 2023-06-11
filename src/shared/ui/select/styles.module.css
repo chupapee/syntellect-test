@@ -3,6 +3,12 @@
 	border-radius: 5px;
 	border: 1px solid var(--blue-light);
 	outline: none;
+
+	cursor: pointer;
+}
+
+.main:hover {
+	border-color: var(--blue-dark);
 }
 
 .main:focus {
