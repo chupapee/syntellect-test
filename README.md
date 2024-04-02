@@ -3,12 +3,12 @@
 Необходимо разработать два компонента-контрола.
 
 ## 🎥 Демо
-### [👉 syntellect-test.vercel.app](https://syntellect-test.vercel.app/)
+### [👉 https://syntellect-test-chupapee.vercel.app](https://syntellect-test-chupapee.vercel.app/)
 
 ## 📸 Скриншоты
 <p>
-  <img src="https://github.com/comeall09/readme-storage/blob/main/images/syntellect/syntellect-desktop.png" width="800" height="400" alt="syntellect test task desktop preview" title="syntellect test task desktop preview" />
-  <img src="https://github.com/comeall09/readme-storage/blob/main/images/syntellect/syntellect-mobile.png" width="379" height="824" alt="syntellect test task mobile preview" title="syntellect test task mobile preview" />
+  <img src="assets/syntellect-desktop.png" width="800" height="400" alt="syntellect test task desktop preview" title="syntellect test task desktop preview" />
+  <img src="assets/syntellect-mobile.png" width="379" height="824" alt="syntellect test task mobile preview" title="syntellect test task mobile preview" />
 </p>
 
 ## 💡 Требования:
@@ -47,7 +47,7 @@
 ## ⚙️ Инструкция по локальному запуску:
 Склонировать репозиторий:
 ```shel
-git clone https://github.com/comeall09/syntellect-test.git <Название папки>
+git clone https://github.com/chupapee/syntellect-test.git <Название папки>
 ```
 Установить зависимости:
 ```shel
